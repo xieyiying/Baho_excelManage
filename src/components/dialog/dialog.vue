@@ -1,6 +1,6 @@
 <template>
     <div class="c_dialog">
-        <el-dialog title="导入Excel" :visible.sync="visible" :show="showDialog" width="650">
+        <el-dialog title="导入Excel" :visible.sync="showDialog" :before-close="modalClose" width="650">
             <span style="font-size: 16px;font-weight: bold;">选择Excel：</span>
             <el-upload
                 class="upload-demo"
@@ -12,9 +12,6 @@
                 <i class="el-icon-upload"></i>
                 <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
             </el-upload>
-            <span slot="footer" class="dialog-footer">
-                <el-button @click="$emit('update:showDialog', false)">关  闭</el-button>
-            </span>
         </el-dialog>
     </div>
 </template>
@@ -35,13 +32,13 @@
         },
         data() {
             return {
-                visible: this.showDialog
+                // visible: this.showDialog
             }
         },
         methods: {
             // 关闭弹框
-            colseDialog() {
-                this.isShowDialog = false
+            modalClose(){
+                this.showDialog = false;
             },
             // 上传成功之后
             handleSuccess(response, file, fileList) {
@@ -53,8 +50,8 @@
             }
         },
         watch: {
-            showDialog() {
-                this.visible = this.showDialog;
+            showDialog : function (val) {
+                this.$emit('update:showDialog', val);
             }
         }
     }
@@ -63,8 +60,8 @@
     .upload-demo {
         display: inline-block;
     }
-    .el-dialog__headerbtn {
+    /* .el-dialog__headerbtn {
         display: none;
-    }
+    } */
 </style>
 

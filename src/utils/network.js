@@ -18,8 +18,8 @@ axios.interceptors.request.use(config => {
     Toast("请求超时！")
     return Promise.resolve(err)
 })
-  
-  // 添加响应拦截器
+
+// 添加响应拦截器
 axios.interceptors.response.use(res => {
     if (res.status && res.status === 200 && res.data.status === 'error') {
         return
@@ -36,7 +36,7 @@ axios.interceptors.response.use(res => {
     return Promise.resolve(err)
 })
 
-export const httpUrl = ''
+export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.165.110:9009'
 
 // 拦截code码
 export const interceptResCode = (res, resolve) => {
@@ -46,9 +46,9 @@ export const interceptResCode = (res, resolve) => {
 // post请求
 export const postRequest = (url, params) => {
     return new Promise((resolve) => {
-        if(process.env.NODE_ENV === 'development') {
-            this.httpUrl = '/api'
-        }
+        // if(process.env.NODE_ENV === 'development') {
+        //     this.httpUrl = '/api'
+        // }
         axios({
           method: 'post',
           url: this.httpUrl + url,
@@ -63,15 +63,18 @@ export const postRequest = (url, params) => {
 }
 
 // get请求
-export const getRequest = (url, params) => {
-    return new Promise(resolve => {
-        if(process.env.NODE_ENV === 'development') {
-            this.httpUrl = '/api'
-        }
+export const getRequest = (url, params, callback) => {
+    return new Promise((resolve) => {
+        // if(process.env.NODE_ENV === 'development') {
+        //     this.httpUrl = '/api'
+        // }
         axios({
           method: 'get',
           url: this.httpUrl + url,
-          params: params
+          data: params,
+          headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+          }
         }).then(res => {
           interceptResCode(res.data, resolve)
         })

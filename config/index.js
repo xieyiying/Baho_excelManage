@@ -16,7 +16,7 @@ module.exports = {
           target:'http://10.0.4.176:8080',
           changeOrigin:true,
           pathRewrite:{
-              '/api':''
+              '/api':'/'
           }
       },
       '/ms':{

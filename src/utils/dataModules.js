@@ -32,7 +32,7 @@ export const activityItemData = [
     },
     {
         prop: 'huodongProtectTime',
-        label: '活动保护时间',
+        label: '活动保护期',
         width: 150
     },
     {
@@ -42,7 +42,7 @@ export const activityItemData = [
     },
     {
         prop: 'hdDengji',
-        label: '活动等级',
+        label: '活动力度（等级）',
         width: 120
     },
     {
@@ -101,7 +101,7 @@ export const activityStoreData = [
     },
     {
         prop: 'huodongProtectTime',
-        label: '活动保护时间',
+        label: '活动保护期',
         width: 150
     },
     {
@@ -111,7 +111,7 @@ export const activityStoreData = [
     },
     {
         prop: 'hdDengji',
-        label: '活动等级',
+        label: '活动力度（等级）',
         width: 120
     },
     {
@@ -131,8 +131,8 @@ export const activityStoreData = [
     },
     {
         prop: 'zhekouTarget',
-        label: '折扣目标',
-        width: 120
+        label: '折扣目标（利润率目标）',
+        width: 150
     },
     {
         prop: 'targetLiuliang',
@@ -173,6 +173,10 @@ export const competeData = [
     {
         prop: 'contendSku',
         label: 'SKU'
+    },
+    {
+        prop: 'salesVolume',
+        label: '销售量'
     },
     {
         prop: 'collect',
@@ -252,6 +256,11 @@ export const GoodsData = [
     {
         prop: 'zhifuNumber',
         label: '支付件数',
+        width: 120
+    },
+    {
+        prop: 'zhifuMoney',
+        label: '支付金额',
         width: 120
     },
     {
@@ -344,6 +353,11 @@ export const industryData = [
         width: 120
     },
     {
+        prop: 'numberOfSearchClicks',
+        label: '搜索点击次数',
+        width: 120
+    },
+    {
         prop: 'searchRate',
         label: '搜索点击率',
         width: 120
@@ -351,6 +365,11 @@ export const industryData = [
     {
         prop: 'shoucangPeopleNumber',
         label: '收藏人数',
+        width: 120
+    },
+    {
+        prop: 'scContent',
+        label: '收藏次数',
         width: 120
     },
     {
@@ -407,11 +426,6 @@ export const industryData = [
         prop: 'zhifuJiaoflZhanbi',
         label: '支付金额较父类目占比',
         width: 150
-    },
-    {
-        prop: 'scContent',
-        label: '收藏次数',
-        width: 120
     },
 ]
 
@@ -511,7 +525,7 @@ export const salesData = [
     },
     {
         prop: 'discountTarget',
-        label: '折扣目标'
+        label: '折扣（毛利率）目标'
     },
     {
         prop: 'profitTarget',
