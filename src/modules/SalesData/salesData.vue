@@ -63,11 +63,9 @@
                 this.getData(this.pageSize)
             },
             getData(current) {
-                this.$axios.get(requestSalesList, {
-                    params: {
-                        pageNo: current,
-                        pageSize: this.pageSize
-                    }
+                requestSalesList({
+                    pageNo: current,
+                    pageSize: this.pageSize
                 }).then(res => {
                     if(res.success) {
                         this.tableData.data = res.body.list

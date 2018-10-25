@@ -63,11 +63,9 @@
                 this.getData(this.pageSize)
             },
             getData(current) {
-                this.$axios.get(requestCompeteList, {
-                    params: {
-                        pageNo: current,
-                        pageSize: this.pageSize
-                    }
+                requestCompeteList({
+                    pageNo: current,
+                    pageSize: this.pageSize
                 }).then(res => {
                     if(res.success) {
                         this.tableData.data = res.body.list

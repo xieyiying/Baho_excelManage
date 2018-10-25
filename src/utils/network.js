@@ -1,6 +1,10 @@
 import axios from 'axios'
+import qs from 'qs'
 import { Toast } from 'vant'
-axios.defaults.timeout = 150000
+import { rejects } from 'assert';
+
+export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.165.110:9009'
+// axios.defaults.baseURL = this.httpUrl
 
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
@@ -36,8 +40,6 @@ axios.interceptors.response.use(res => {
     return Promise.resolve(err)
 })
 
-export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.165.110:9009'
-
 // 拦截code码
 export const interceptResCode = (res, resolve) => {
     resolve(res)
@@ -46,37 +48,27 @@ export const interceptResCode = (res, resolve) => {
 // post请求
 export const postRequest = (url, params) => {
     return new Promise((resolve) => {
-        // if(process.env.NODE_ENV === 'development') {
-        //     this.httpUrl = '/api'
-        // }
-        axios({
-          method: 'post',
-          url: this.httpUrl + url,
-          data: params,
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-          }
+        axios.post(url, qs.stringify(params), {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
         }).then(res => {
-          interceptResCode(res.data, resolve)
+            resolve(res.data)
+        }).catch(err => {
+            console.log(err)
         })
     })
 }
 
 // get请求
-export const getRequest = (url, params, callback) => {
+export const getRequest = (url, params) => {
     return new Promise((resolve) => {
-        // if(process.env.NODE_ENV === 'development') {
-        //     this.httpUrl = '/api'
-        // }
-        axios({
-          method: 'get',
-          url: this.httpUrl + url,
-          data: params,
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-          }
+        axios.get(url, {
+            params: params
         }).then(res => {
-          interceptResCode(res.data, resolve)
+            resolve(res.data)
+        }).catch(err => {
+            console.log(err)
         })
     })
 }
