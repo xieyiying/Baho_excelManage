@@ -47,12 +47,12 @@ export const activityItemData = [
     },
     {
         prop: 'itemSpu',
-        label: 'spu',
+        label: 'SPU',
         width: 120
     },
     {
         prop: 'itemSku',
-        label: 'sku',
+        label: 'SKU',
         width: 120
     },
     {
@@ -164,7 +164,7 @@ export const competeData = [
     },
     {
         prop: 'jingpinShop',
-        label: '竞品商铺'
+        label: '竞品店铺'
     },
     {
         prop: 'contendSpu',
@@ -172,7 +172,7 @@ export const competeData = [
     },
     {
         prop: 'contendSku',
-        label: 'SKU'
+        label: 'sku'
     },
     {
         prop: 'salesVolume',
@@ -199,13 +199,13 @@ export const competeData = [
 // 商品销售数据
 export const GoodsData = [
     {
-        prop: 'ngjiDate',
-        label: '统计时间',
+        prop: 'tongjiDate',
+        label: '统计日期',
         width: 120
     },
     {
         prop: 'commodityId',
-        label: '商品id',
+        label: '商品ID',
         width: 120
     },
     {
@@ -225,7 +225,7 @@ export const GoodsData = [
     },
     {
         prop: 'xiangqing',
-        label: '详情跳出率',
+        label: '详情页跳出率',
         width: 120
     },
     {
@@ -240,7 +240,7 @@ export const GoodsData = [
     },
      {
         prop: 'skuJiagouNumber',
-        label: 'sku加购件数',
+        label: 'SKU加购件数',
         width: 120
     },
     {
@@ -330,7 +330,7 @@ export const industryData = [
     {
         prop: 'dateTime',
         label: '日期',
-        width: 120
+        width: 150
     },
     {
         prop: 'type',
@@ -548,35 +548,248 @@ export const salesData = [
 // 店铺数据
 export const shopData = [
     {
-        prop: 'dateTime',
-        label: '日期'
+        prop: 'tongjiDate',
+        label: '统计日期',
+        width: 120
     },
     {
-        prop: 'jingpinShop',
-        label: '竞品商铺'
+        prop: 'fangkeNumber',
+        label: '访客数',
+        width: 120
     },
     {
-        prop: 'contendSpu',
-        label: 'spu'
+        prop: 'liulanNumber',
+        label: '浏览量',
+        width: 120
     },
     {
-        prop: 'contendSku',
-        label: 'SKU'
+        prop: 'shopFangkeNumber',
+        label: '商品访客数',
+        width: 120
     },
     {
-        prop: 'collect',
-        label: '收藏'
+        prop: 'shopLiulanNumber',
+        label: '商品浏览量',
+        width: 120
     },
     {
-        prop: 'price',
-        label: '价格'
+        prop: 'tingliuTimeAve',
+        label: '平均停留时长',
+        width: 120
     },
     {
-        prop: 'xiaoshouMoney',
-        label: '销售金额'
+        prop: 'tiaoshiLv',
+        label: '跳失率',
+        width: 120
     },
     {
-        prop: 'huodongName',
-        label: '活动名称'
+        prop: 'shopShoucangNumber',
+        label: '商品收藏买家数',
+        width: 120
+    },
+    {
+        prop: 'shopShoucangContent',
+        label: '商品收藏次数',
+        width: 120
+    },
+    {
+        prop: 'jiagouPeople',
+        label: '加购人数',
+        width: 120
+    },
+    {
+        prop: 'zhifuMoney',
+        label: '支付金额',
+        width: 120
+    },
+    {
+        prop: 'zhifuMjNumber',
+        label: '支付买家数',
+        width: 120
+    },
+    {
+        prop: 'zfZiddNumber',
+        label: '支付子订单数',
+        width: 120
+    },
+    {
+        prop: 'zhifuJianNumber',
+        label: '支付件数',
+        width: 120
+    },
+    {
+        prop: 'xiadanMoney',
+        label: '下单金额',
+        width: 120
+    },
+    {
+        prop: 'xiadanBuyNumber',
+        label: '下单买家数',
+        width: 120
+    },
+    {
+        prop: 'xiadanJianContent',
+        label: '下单件数',
+        width: 120
+    },
+    {
+        prop: 'liulanAve',
+        label: '人均浏览量',
+        width: 120
+    },
+    {
+        prop: 'xiadanZhLv',
+        label: '下单转化率',
+        width: 120
+    },
+    {
+        prop: 'zhifuZhLv',
+        label: '支付转化率',
+        width: 120
+    },
+    {
+        prop: 'kedanPrice',
+        label: '客单价',
+        width: 120
+    },
+    {
+        prop: 'uvJiazhi',
+        label: 'UV价值',
+        width: 120
+    },
+    {
+        prop: 'oldFangkeNumber',
+        label: '老访客数',
+        width: 120
+    },
+    {
+        prop: 'newFangkeNumber',
+        label: '新访客数',
+        width: 120
+    },
+    {
+        prop: 'jiagouJianshu',
+        label: '加购件数',
+        width: 120
+    },
+    {
+        prop: 'zhifuOlebuyNumber',
+        label: '支付老买家数',
+        width: 120
+    },
+    {
+        prop: 'oldZhifuMoney',
+        label: '老买家支付金额',
+        width: 120
+    },
+    {
+        prop: 'zhitongcheConsume',
+        label: '直通车消耗',
+        width: 120
+    },
+    {
+        prop: 'zszwConsume',
+        label: '钻石展位消耗',
+        width: 120
+    },
+    {
+        prop: 'taobaoGuestBrokerage',
+        label: '淘宝客佣金',
+        width: 120
+    },
+    {
+        prop: 'tureTuikuanMoney',
+        label: '成功退款金额',
+        width: 120
+    },
+    {
+        prop: 'evaluateNumber',
+        label: '评价数',
+        width: 120
+    },
+    {
+        prop: 'youtuEvaluateNumber',
+        label: '有图评价数',
+        width: 120
+    },
+    {
+        prop: 'zhengmianEvaluateNumber',
+        label: '正面评价数',
+        width: 120
+    },
+    {
+        prop: 'fumianEvaluateNumber',
+        label: '负面评价数',
+        width: 120
+    },
+    {
+        prop: 'oldbuyZhengmianEvaluateNumber',
+        label: '老买家正面评价数',
+        width: 120
+    },
+    {
+        prop: 'oldbuyFumianEvaluateNumber',
+        label: '老买家负面评价数',
+        width: 120
+    },
+    {
+        prop: 'zhifuFuddNumber',
+        label: '支付父订单数',
+        width: 120
+    },
+    {
+        prop: 'lsBgNumber',
+        label: '揽收包裹数',
+        width: 120
+    },
+    {
+        prop: 'logisticsServiceRating',
+        label: '物流服务评分',
+        width: 120
+    },
+    {
+        prop: 'descriptionMatchingScore',
+        label: '描述相符评分',
+        width: 120
+    },
+    {
+        prop: 'aveZhifuQianshouDaye',
+        label: '平均支付_签收时长(秒)',
+        width: 150
+    },
+    {
+        prop: 'qianshouTureBaoguoNumber',
+        label: '签收成功包裹数',
+        width: 120
+    },
+    {
+        prop: 'sendParcelNumber',
+        label: '派送包裹数',
+        width: 120
+    },
+    {
+        prop: 'fahuoParcelNumber',
+        label: '发货包裹数',
+        width: 120
+    },
+    {
+        prop: 'serviceAttitudeScore',
+        label: '服务态度评分',
+        width: 120
+    },
+    {
+        prop: 'xiadanZhifuZhuanhuaLv',
+        label: '下单-支付转化率',
+        width: 120
+    },
+    {
+        prop: 'zhifuCommodityNumber',
+        label: '支付商品数',
+        width: 120
+    },
+    {
+        prop: 'shopShoucangBuyNumber',
+        label: '店铺收藏买家数',
+        width: 120
     },
 ]

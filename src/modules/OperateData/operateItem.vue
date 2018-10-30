@@ -59,7 +59,9 @@
             // 关闭弹框
             handleClose() {
                 this.dialogVisible = false
+                // console.log('this fileList', this.fileList)
                 this.fileList = []
+                // this.handleRemove()
                 this.getData(this.pageSize)
             },
             getData(current) {
@@ -75,7 +77,7 @@
             },
             // 导入Excel
             importExcel() {
-                this.showDialog = true
+                this.dialogVisible = true
                 this.action = importOperateItemExcel
             },
             // 下载模板
@@ -94,7 +96,11 @@
             // 上传失败
             handleError(err, file, fileList) {
                 this.$message.error('上传失败！');
-            }
+            },
+            // handleRemove(file, fileList) {
+            //     console.log('remove fileList', fileList)
+            //     this.fileList = []
+            // }
         },
         created() {
             this.getData(1)

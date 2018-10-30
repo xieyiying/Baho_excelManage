@@ -1,9 +1,8 @@
 import axios from 'axios'
 import qs from 'qs'
 import { Toast } from 'vant'
-import { rejects } from 'assert';
 
-export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.165.110:9009'
+export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.51.37:8080'
 // axios.defaults.baseURL = this.httpUrl
 
 // 添加请求拦截器

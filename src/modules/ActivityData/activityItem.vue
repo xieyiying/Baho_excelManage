@@ -75,7 +75,7 @@
             },
             // 导入Excel
             importExcel() {
-                this.showDialog = true
+                this.dialogVisible = true
                 this.action = importActivityItemExcel
             },
             // 下载模板
