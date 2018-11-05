@@ -76,11 +76,11 @@
             // 导入Excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = importOperateStoreExcel
+                this.action = importOperateStoreExcel()
             },
             // 下载模板
             downloadTemplate() {
-                window.location.href = downloadOperateStoreTemplate
+                window.location.href = downloadOperateStoreTemplate()
             },
             // 分页切换
             currentChange(current) {

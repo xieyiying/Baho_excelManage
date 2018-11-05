@@ -76,11 +76,11 @@
             // 导入Excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = importCompeteExcel
+                this.action = importCompeteExcel()
             },
             // 下载模板
             downloadTemplate() {
-                window.location.href = downloadCompeteTemplate
+                window.location.href = downloadCompeteTemplate()
             },
             // 分页切换
             currentChange(current) {

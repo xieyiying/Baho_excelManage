@@ -76,11 +76,11 @@
             // 导入Excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = importGoodsExcel
+                this.action = importGoodsExcel()
             },
             // 下载模板
             downloadTemplate() {
-                window.location.href = downloadGoodsTemplate
+                window.location.href = downloadGoodsTemplate()
             },
             // 分页切换
             currentChange(current) {
@@ -98,7 +98,8 @@
         },
         created() {
             this.getData(1)
-        }
+            
+        },
     }
 </script>
 <style>

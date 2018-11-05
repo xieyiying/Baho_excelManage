@@ -76,11 +76,11 @@
             // 导入Excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = importActivityItemExcel
+                this.action = importActivityItemExcel()
             },
             // 下载模板
             downloadTemplate() {
-                window.location.href = downloadActivityItemTemplate
+                window.location.href = downloadActivityItemTemplate()
             },
             // 分页切换
             currentChange(current) {
