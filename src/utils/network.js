@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 import { Toast } from 'vant'
 
-export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.51.37:9001'
+export const httpUrl = process.env.NODE_ENV === 'development' ? '/api' : 'http://47.99.204.160:80'
 const username = localStorage.getItem('username')
 const token = localStorage.getItem('token')
 
