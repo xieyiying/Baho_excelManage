@@ -1,18 +1,18 @@
 <template>
     <div class="goods_data">
-        <c-table
-            :tableData="tableData"
-            :pageTotal="pageTotal"
-            :pageSize="pageSize"
-            tableTitle="生意参谋市场行情行业大盘数据"
-            @importExcel="importExcel"
-            @downloadTemplate="downloadTemplate"
-            @currentChange="currentChange"
-        ></c-table>
+        <div class="crumbs">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item><i class="el-icon-tickets"></i> 客户成本（按日）</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+        <div class="container">
+            <div class="handle-box">
+                <el-button type="primary" style="margin-bottom: 20px;" @click="importExcel">导入Excel</el-button>
+            </div>
+        </div>
         <el-dialog
             title="导入Excel"
             :visible.sync="dialogVisible"
-            width="650"
             :before-close="handleClose"
         >
             <span style="font-size: 16px;font-weight: bold;">选择Excel：</span>
@@ -33,25 +33,14 @@
     </div>
 </template>
 <script>
-    import { industryInterface } from '@/utils/https.js'
-    import { industryData } from '@/utils/dataModules'
+    import { importCustomerCost } from '@/utils/https.js'
     export default {
-        name: 'industryData',
+        name: 'ChannelCost',
         data() {
             return {
-                // 表格数据
-                tableData: {
-                    data: [],
-                    column: industryData
-                },
-                // 总页数
-                pageTotal: 1,
-                // 每页显示多少条
-                pageSize: 10,
-                // 文件上传地址
-                action: '',
                 // 弹框是否显示
                 dialogVisible: false,
+                action: '',
                 fileList: []
             }
         },
@@ -60,31 +49,14 @@
             handleClose() {
                 this.dialogVisible = false
                 this.fileList = []
-                this.getData(this.pageSize)
             },
-            getData(current) {
-                industryInterface.requestIndustryList({
-                    pageNo: current,
-                    pageSize: this.pageSize
-                }).then(res => {
-                    if(res.success) {
-                        this.tableData.data = res.body.list
-                        this.pageTotal = res.body.count
-                    }
-                })
-            },
-            // 导入Excel
+            // 导入excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = industryInterface.importIndustryExcel
+                this.action = importCustomerCost
             },
-            // 下载模板
-            downloadTemplate() {
-                window.location.href = industryInterface.downloadIndustryTemplate
-            },
-            // 分页切换
-            currentChange(current) {
-                this.getData(current)
+            handleClose() {
+                this.dialogVisible = false
             },
             // 上传成功
             handleSuccess(response, file, fileList) {
@@ -97,7 +69,7 @@
             }
         },
         created() {
-            this.getData(1)
+            
         }
     }
 </script>

@@ -35,55 +35,70 @@
                         index: 'goodsData',
                         title: '商品销售数据'
                     },
-                    {
-                        icon: 'el-icon-document',
-                        index: 'shopData',
-                        title: '店铺数据'
-                    },
-                    {
-                        icon: 'el-icon-document',
-                        index: 'activityData',
-                        title: '活动数据',
-                        subs: [
-                            {
-                                index: 'activityStore',
-                                title: '店铺'
-                            },
-                            {
-                                index: 'activityItem',
-                                title: '单品'
-                            }
-                        ]
-                    },
-                    {
-                        icon: 'el-icon-document',
-                        index: 'operateData',
-                        title: '运营动作记录数据',
-                        subs: [
-                            {
-                                index: 'operateStore',
-                                title: '店铺'
-                            },
-                            {
-                                index: 'operateItem',
-                                title: '单品'
-                            }
-                        ]
-                    },
-                    {
-                        icon: 'el-icon-document',
-                        index: 'salesData',
-                        title: '销售目标数据'
-                    },
-                    {
-                        icon: 'el-icon-document',
-                        index: 'competeData',
-                        title: '竞争数据'
-                    },
+                    // {
+                    //     icon: 'el-icon-document',
+                    //     index: 'shopData',
+                    //     title: '店铺数据'
+                    // },
+                    // {
+                    //     icon: 'el-icon-document',
+                    //     index: 'activityData',
+                    //     title: '活动数据',
+                    //     subs: [
+                    //         {
+                    //             index: 'activityStore',
+                    //             title: '店铺'
+                    //         },
+                    //         {
+                    //             index: 'activityItem',
+                    //             title: '单品'
+                    //         }
+                    //     ]
+                    // },
+                    // {
+                    //     icon: 'el-icon-document',
+                    //     index: 'operateData',
+                    //     title: '运营动作记录数据',
+                    //     subs: [
+                    //         {
+                    //             index: 'operateStore',
+                    //             title: '店铺'
+                    //         },
+                    //         {
+                    //             index: 'operateItem',
+                    //             title: '单品'
+                    //         }
+                    //     ]
+                    // },
+                    // {
+                    //     icon: 'el-icon-document',
+                    //     index: 'salesData',
+                    //     title: '销售目标数据'
+                    // },
+                    // {
+                    //     icon: 'el-icon-document',
+                    //     index: 'competeData',
+                    //     title: '竞争数据'
+                    // },
                     {
                         icon: 'el-icon-document',
                         index: 'industryData',
                         title: '生意参谋市场行情行业大盘数据'
+                    },
+                    {
+                        icon: 'el-icon-document',
+                        index: 'channelCost',
+                        title: '渠道费用'
+                    },
+                    {
+                        icon: 'el-icon-document',
+                        index: 'customerCost',
+                        title: '客户成本（按日）'
+                    },
+                    {
+                        icon: 'el-icon-document',
+                        index: 'customerAddress',
+                        title: '客户地址（按日增量）'
                     },
                 ]
             }

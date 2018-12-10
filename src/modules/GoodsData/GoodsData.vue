@@ -33,7 +33,7 @@
     </div>
 </template>
 <script>
-    import { requestGoodsList, importGoodsExcel, downloadGoodsTemplate } from '@/utils/borrow'
+    import { goodsInterface } from '@/utils/https.js'
     import { GoodsData } from '@/utils/dataModules'
     export default {
         name: 'goodsData',
@@ -52,7 +52,8 @@
                 action: '',
                 // 弹框是否显示
                 dialogVisible: false,
-                fileList: []
+                fileList: [],
+                currentPage: 1
             }
         },
         methods: {
@@ -60,10 +61,10 @@
             handleClose() {
                 this.dialogVisible = false
                 this.fileList = []
-                this.getData(this.pageSize)
+                this.getData(this.currentPage)
             },
             getData(current) {
-                requestGoodsList({
+                goodsInterface.requestGoodsList({
                     pageNo: current,
                     pageSize: this.pageSize
                 }).then(res => {
@@ -76,14 +77,16 @@
             // 导入Excel
             importExcel() {
                 this.dialogVisible = true
-                this.action = importGoodsExcel()
+                this.action = goodsInterface.importGoodsExcel
             },
             // 下载模板
             downloadTemplate() {
-                window.location.href = downloadGoodsTemplate()
+                // console.log(goodsInterface.downloadGoodsTemplate)
+                window.location.href = goodsInterface.downloadGoodsTemplate
             },
             // 分页切换
             currentChange(current) {
+                this.currentPage = current
                 this.getData(current)
             },
             // 上传成功

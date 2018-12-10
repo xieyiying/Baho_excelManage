@@ -199,233 +199,208 @@ export const competeData = [
 // 商品销售数据
 export const GoodsData = [
     {
-        prop: 'tongjiDate',
-        label: '统计日期',
-        width: 120
+        prop: 'date',
+        label: '日期',
+        width: 150
     },
     {
-        prop: 'commodityId',
-        label: '商品ID',
-        width: 120
+        prop: 'spu',
+        label: '商品SPU',
+        // width: 120
     },
     {
-        prop: 'commodityName',
-        label: '商品名称',
-        width: 120
+        prop: 'sku',
+        label: '商品SKU',
+        // width: 120
     },
     {
-        prop: 'merchandiseTraffic',
-        label: '商品浏览量',
-        width: 120
+        prop: 'tagPrice',
+        label: '吊牌价',
+        // width: 120
     },
     {
-        prop: 'visitorNumber',
-        label: '访客数',
-        width: 120
+        prop: 'cost',
+        label: '成本',
+        // width: 120
     },
     {
-        prop: 'xiangqing',
-        label: '详情页跳出率',
-        width: 120
+        prop: 'pageSalesPrice',
+        label: '页面售价（未减去优惠券）',
+        width: 200
     },
     {
-        prop: 'tingliuAve',
-        label: '平均停留时长',
-        width: 120
-    },
-    {
-        prop: 'jiagouNumber',
-        label: '加购件数',
-        width: 120
+        prop: 'salesQuantity',
+        label: '销售量（未去掉退款）',
+        width: 150
     },
      {
-        prop: 'skuJiagouNumber',
-        label: 'SKU加购件数',
-        width: 120
+        prop: 'salesAmount',
+        label: '销售金额（未去掉退款）',
+        width: 200
     },
     {
-        prop: 'shoucangNumber',
-        label: '收藏人数',
-        width: 120
+        prop: 'numberOfRefunds',
+        label: '退款件数',
+        // width: 120
     },
     {
-        prop: 'zfmjNumber',
-        label: '支付买家数',
-        width: 120
-    },
-    {
-        prop: 'zhifuNumber',
-        label: '支付件数',
-        width: 120
-    },
-    {
-        prop: 'zhifuMoney',
-        label: '支付金额',
-        width: 120
-    },
-    {
-        prop: 'zhifuLv',
-        label: '支付转化率',
-        width: 120
-    },
-    {
-        prop: 'xiadanZhifuLv',
-        label: '下单支付转化率',
-        width: 120
-    },
-    {
-        prop: 'xiadanBuyNumber',
-        label: '下单买家数',
-        width: 120
-    },
-    {
-        prop: 'xiadanNumber',
-        label: '下单件数',
-        width: 120
-    },
-    {
-        prop: 'xiadanMoney',
-        label: '下单金额',
-        width: 120
-    },
-    {
-        prop: 'xiadanLv',
-        label: '下单转化率',
-        width: 120
-    },
-    {
-        prop: 'sousuoVisitor',
-        label: '搜索引导访客数',
-        width: 120
-    }, 
-    {
-        prop: 'sousuoZhifuLv',
-        label: '搜索支付转化率',
-        width: 120
-    }, 
-    {
-        prop: 'ssYdBn',
-        label: '搜索引导支付买家数',
-        width: 150
-    }, 
-    {
-        prop: 'describes',
-        label: '描述相符',
-        width: 120
-    }, 
-    {
-        prop: 'fmPj',
-        label: '负面评价',
-        width: 120
-    }, 
-    {
-        prop: 'top',
-        label: '地域top5',
-        width: 120
-    },
+        prop: 'refundAmount',
+        label: '退款金额',
+        // width: 120
+    }
 ]
 
 // 生意参谋市场行情行业大盘数据
 export const industryData = [
     {
-        prop: 'dateTime',
+        prop: 'date',
         label: '日期',
         width: 150
     },
     {
-        prop: 'type',
-        label: '类目',
+        prop: 'platformid',
+        label: '商品id',
         width: 120
     },
     {
-        prop: 'numberOfVisitors',
-        label: '访客数',
+        prop: 'productTitle',
+        label: '商品标题',
         width: 120
     },
     {
-        prop: 'liulanContent',
+        prop: 'productOnlineStatus',
+        label: '商品状态',
+        width: 120
+    },
+    {
+        prop: 'productLink',
+        label: '商品链接',
+        width: 200
+    },
+    {
+        prop: 'numberOfviews',
         label: '浏览量',
         width: 120
     },
     {
-        prop: 'numberOfClicks',
-        label: '搜索点击人数',
+        prop: 'numberOfvisitors',
+        label: '访客数',
         width: 120
     },
     {
-        prop: 'numberOfSearchClicks',
-        label: '搜索点击次数',
+        prop: 'averageLengthOfstay',
+        label: '平均停留时长',
+        width: 150
+    },
+    {
+        prop: 'detailPageBounceRate',
+        label: '详情页跳出率',
+        width: 150
+    },
+    {
+        prop: 'orderConversionRate',
+        label: '下单转化率',
         width: 120
     },
     {
-        prop: 'searchRate',
-        label: '搜索点击率',
+        prop: 'orderPaymentConversionRate',
+        label: '下单支付转化率',
+        width: 150
+    },
+    {
+        prop: 'paymentConversionRate',
+        label: '支付转化率',
         width: 120
     },
     {
-        prop: 'shoucangPeopleNumber',
+        prop: 'orderAmount',
+        label: '下单金额',
+        width: 120
+    },
+    {
+        prop: 'numberOfOrdersPlaced',
+        label: '下单商品件数',
+        width: 150
+    },
+    {
+        prop: 'numberOfBuyers',
+        label: '下单买家数',
+        width: 120
+    },
+    {
+        prop: 'paymentAmount',
+        label: '支付金额',
+        width: 120
+    },
+    {
+        prop: 'numberOfitemsPaid',
+        label: '支付商品件数',
+        width: 150
+    },
+    {
+        prop: 'addToCartitemQuantity',
+        label: '加购件数',
+        width: 120
+    },
+    {
+        prop: 'averageVisitorValue',
+        label: '访客平均价值',
+        width: 150
+    },
+    {
+        prop: 'hitCount',
+        label: '点击次数',
+        width: 120
+    },
+    {
+        prop: 'clickRate',
+        label: '点击率',
+        width: 120
+    },
+    {
+        prop: 'exposure',
+        label: '曝光量',
+        width: 120
+    },
+    {
+        prop: 'productCollectionBuyers',
         label: '收藏人数',
         width: 120
     },
     {
-        prop: 'scContent',
-        label: '收藏次数',
-        width: 120
+        prop: 'searchToGuideTheNumberOfBuyers',
+        label: '搜索引导支付买家数',
+        width: 200
     },
     {
-        prop: 'jiagouPeopleNumber',
-        label: '加购人数',
-        width: 120
-    },
-    {
-        prop: 'shoucangContent',
-        label: '加购次数',
-        width: 120
-    },
-    {
-        prop: 'customerTransactionPrice',
+        prop: 'orderPrice',
         label: '客单价',
         width: 120
     },
     {
-        prop: 'liulanShopContent',
-        label: '浏览商品数',
-        width: 120
-    },
-    {
-        prop: 'numberOfSellers',
-        label: '卖家数',
-        width: 120
-    },
-    {
-        prop: 'beiliulanMaijiaContent',
-        label: '被浏览卖家数',
-        width: 120
-    },
-    {
-        prop: 'beizhifuMaijiaContent',
-        label: '被支付卖家数',
-        width: 120
-    },
-    {
-        prop: 'zhifuContent',
-        label: '支付件数',
-        width: 120
-    },
-    {
-        prop: 'searchPopularity',
-        label: '搜索人气',
-        width: 120
-    },
-    {
-        prop: 'tradingIndex',
-        label: '交易指数',
-        width: 120
-    },
-    {
-        prop: 'zhifuJiaoflZhanbi',
-        label: '支付金额较父类目占比',
+        prop: 'searchPaymentConversionRate',
+        label: '搜索支付转化率',
         width: 150
+    },
+    {
+        prop: 'searchForTheNumberOfGuidedVisitors',
+        label: '搜索引导访客数',
+        width: 150
+    },
+    {
+        prop: 'payingTheNumberOfBuyers',
+        label: '支付买家数',
+        width: 150
+    },
+    {
+        prop: 'successfulRefundAmount',
+        label: '售中售后成功退款金额',
+        width: 200
+    },
+    {
+        prop: 'numberOfSuccessfulRefunds',
+        label: '售中售后成功退款笔数',
+        width: 200
     },
 ]
 

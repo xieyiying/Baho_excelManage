@@ -49,7 +49,6 @@
             handleCommand(command) {
                 if(command == 'loginout'){
                     localStorage.removeItem('username')
-                    localStorage.removeItem('token')
                     this.$router.push('/login');
                 }
             },

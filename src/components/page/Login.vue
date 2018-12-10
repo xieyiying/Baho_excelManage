@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import { loginUrl } from '@/utils/borrow'
+    // import { loginUrl } from '@/utils/borrow'
     import $ from 'jquery'
     export default {
         data: function(){
@@ -41,18 +41,20 @@
             submitForm(formName) {
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        loginUrl({
-                            userName: this.ruleForm.userName,
-                            password: this.ruleForm.password,
-                        }).then(res => {
-                            if(res.success) {
-                                localStorage.setItem('username', this.ruleForm.userName);
-                                localStorage.setItem('token', res.body.token);
-                                this.$router.push('/');
-                            }
-                        }).catch(error => {
-                            this.$message.error('登录失败')
-                        })
+                        localStorage.setItem('username', this.ruleForm.userName);
+                        this.$router.push('/');
+                        // loginUrl({
+                        //     userName: this.ruleForm.userName,
+                        //     password: this.ruleForm.password,
+                        // }).then(res => {
+                        //     if(res.success) {
+                        //         localStorage.setItem('username', this.ruleForm.userName);
+                        //         localStorage.setItem('token', res.body.token);
+                        //         this.$router.push('/');
+                        //     }
+                        // }).catch(error => {
+                        //     this.$message.error('登录失败')
+                        // })
                     } else {
                         this.$message.error('error submit!!');
                         return false;

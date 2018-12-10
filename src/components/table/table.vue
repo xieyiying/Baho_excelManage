@@ -9,8 +9,9 @@
             <div class="handle-box">
                 <el-input v-model="select_word" placeholder="筛选关键词" class="handle-input mr10" v-show="isSearch"></el-input>
                 <el-button type="primary" icon="el-icon-search" @click="handleSearch" v-show="isSearch">搜索</el-button>
-                <el-button type="primary" style="float: right; margin-bottom: 20px;" @click="importExcel">导入Excel</el-button>
-                <el-button type="success" style="float: right; margin-bottom: 20px;" @click="handleDownload">下载模板</el-button>
+                <el-button type="primary" style="float: right; margin-bottom: 20px;" @click="importExcel" v-show="isShowImport">导入Excel</el-button>
+                <el-button type="success" style="float: right; margin-bottom: 20px;" @click="handleDownload" v-show="isShowDownload">下载模板</el-button>
+                <el-button type="success" style="float: right; margin-bottom: 20px;" @click="handleAdd" v-show="isShowAdd">添加数据</el-button>
             </div>
             <el-table :data="tableData.data" border style="width: 100%" ref="multipleTable">
                 <el-table-column :fixed="col.fixed" v-for="(col, index) in tableData.column" :key="index" :prop="col.prop" :label="col.label" :width="col.width"></el-table-column>
@@ -56,6 +57,18 @@
                 type: Number,
                 default: 20
             },
+            isShowImport: {
+                type: Boolean,
+                default: true
+            },
+            isShowDownload: {
+                type: Boolean,
+                default: true
+            },
+            isShowAdd: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {
             // 搜索
@@ -74,6 +87,9 @@
             // 分页切换
             handleCurrentChange(val) {
                 this.$emit('currentChange', val)
+            },
+            handleAdd() {
+                this.$emit('addExcelData')
             }
         }
     }
