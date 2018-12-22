@@ -9,7 +9,7 @@ export const saveChannelCost = params => {
 export const importCustomerCost = httpUrl + '/dfapi/page/kub/category/kubFiveCategory/import'
 
 // 客户地址导入
-export const importCustomerAddress = httpUrl + '/dfapi/page/kub/categoryaddress/kubFiveCategoryAddress/import'
+export const importCustomerAddress = httpUrl + '/dfapi/page/kub/address/kubFiveCategoryAddress/import'
 
 // 商品销售数据
 export const goodsInterface = {

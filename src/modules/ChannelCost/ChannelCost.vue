@@ -21,7 +21,7 @@
                     <el-input v-model.trim="form.costInCent" placeholder="请输入费用额" class="handle-input"></el-input>
                 </el-form-item>
                 <el-form-item label="费用日期：">
-                    <el-date-picker v-model="form.date" type="datetime" placeholder="请选择日期时间" value-format="yyyy-MM-dd HH:mm:ss" :picker-options="pickerOptions1"></el-date-picker>
+                    <el-date-picker v-model="form.date" type="date" placeholder="请选择日期时间" value-format="yyyy-MM-dd" :picker-options="pickerOptions1"></el-date-picker>
                 </el-form-item>
                 <div class="dialog-footer" style="margin-top: 10px;">
                     <el-form-item style="text-align: right">
